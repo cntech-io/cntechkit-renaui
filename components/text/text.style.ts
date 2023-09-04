@@ -5,23 +5,19 @@ import { flattenStyle } from "../../utils";
 import { ThemeSystem } from "../../theme";
 
 const textStyle = (props: TextStyleProps) => {
-  const flattenedStyle = flattenStyle(props.style);
-  const textAlign: TextStyle = props.center ? { textAlign: "center" } : {};
-
-  const fontSize = ThemeSystem.textSize[props.size!];
-  const fontWeight = props.bold ? "bold" : "normal";
-  const padding = ThemeSystem.padding[defaultTheme.textPaddingSize];
-  const margin = ThemeSystem.margin[props.marginSize || defaultTheme.textMarginSize];
+  const _style = flattenStyle(props.style);
+  const _center: TextStyle = props.center ? { textAlign: "center" } : {};
 
   return StyleSheet.create({
     root: {
-      fontSize,
+      fontSize: ThemeSystem.textSize[props.size!],
       alignItems: "center",
-      fontWeight,
-      padding,
-      margin,
-      ...textAlign,
-      ...flattenedStyle,
+      fontWeight: props.bold ? "bold" : "normal",
+      padding: ThemeSystem.padding[defaultTheme.textPaddingSize],
+      margin:
+        ThemeSystem.margin[props.marginSize || defaultTheme.textMarginSize],
+      ..._center,
+      ..._style,
     },
   });
 };

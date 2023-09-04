@@ -18,18 +18,18 @@ const Input = (props: InputProps) => {
     ...styleProps
   } = props;
 
-  const style = inputStyle({ ...styleProps });
+  const _style = inputStyle({ ...styleProps });
 
   return (
     <Flex
       paddingSize={defaultTheme.inputContainerPadding}
-      style={titleComponent ? style.rootLabelled : style.root}
+      style={titleComponent ? _style.rootLabelled : _style.root}
     >
       {titleComponent}
       <Flex
         paddingSize={defaultTheme.inputContainerPadding}
         direction="row"
-        style={leftComponent ? style.wrapperWithIcon : style.wrapper}
+        style={leftComponent ? _style.wrapperWithIcon : _style.wrapper}
       >
         {leftComponent}
         <TextInput
@@ -38,8 +38,8 @@ const Input = (props: InputProps) => {
           value={value}
           placeholder={placeholder}
           hitSlop={defaultTheme.inputHitSlop}
-          style={[style.input, props.inputStyle]}
-          {...inputProps}
+          style={[_style.input, props.inputStyle]}
+          {...props.inputProps}
         />
       </Flex>
     </Flex>
