@@ -1,0 +1,25 @@
+{
+  "name": "@cntech/cntechkit-renaui",
+  "version": "1.1.8",
+  "description": "",
+  "main": "index.ts",
+  "repository": "https://github.com/cntech-io/cntechkit-renaui.git",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "CNTECH Technology Inc.",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.28",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.71.4"
+  },
+  "peerDependencies": {
+    "react-native-linear-gradient": "^2.6.2"
+  }
+}
