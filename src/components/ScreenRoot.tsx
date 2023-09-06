@@ -1,6 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View, ViewStyle } from "react-native";
-import { Fill, Padding3, PaddingNone } from "../styles";
+import { Fill, PaddingNone } from "../styles";
+import defaultValues from "../styles/default-values";
 
 export type ScreenRootProps = {
   children?: React.ReactNode;
@@ -51,7 +52,7 @@ export default class ScreenRoot extends React.Component<
 const styles = StyleSheet.create({
   root: {
     ...Fill,
-    ...Padding3,
+    ...defaultValues.Padding,
   },
   header: {
     width: "100%",

@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, TextStyle, Text, TextProps, View } from "react-native";
+import defaultValues from "../styles/default-values";
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -22,8 +23,8 @@ const Label = (props: LabelProps) => {
 
 const styles = StyleSheet.create({
   root: {
-    fontSize: 16,
-    color: "black",
+    ...defaultValues.TextSize,
+    ...defaultValues.TextColor,
   },
 });
 

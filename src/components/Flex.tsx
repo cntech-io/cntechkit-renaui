@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View, ViewStyle } from "react-native";
-import { Fill, Padding3, PaddingNone } from "../styles";
+import { Fill, PaddingNone } from "../styles";
+import defaultValues from "../styles/default-values";
 
 export type FlexProps = {
   children?: React.ReactNode;
@@ -42,11 +43,11 @@ const Flex = (props: FlexProps) => {
 const styles = StyleSheet.create({
   rootRow: {
     flexDirection: "row",
-    ...Padding3,
+    ...defaultValues.Padding,
   },
   rootColumn: {
     flexDirection: "column",
-    ...Padding3,
+    ...defaultValues.Padding,
   },
 });
 
