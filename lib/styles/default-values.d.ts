@@ -8,5 +8,6 @@ declare const _default: {
         color: string;
     };
     IconSize: import("react-native/types").ViewStyle;
+    HeaderHorizontalPadding: import("react-native/types").ViewStyle;
 };
 export default _default;

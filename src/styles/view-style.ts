@@ -1,4 +1,4 @@
-import { ImageStyle, ViewStyle } from "react-native";
+import { ViewStyle } from "react-native";
 
 const Fill: ViewStyle = {
   flex: 1,
@@ -6,6 +6,14 @@ const Fill: ViewStyle = {
 
 const Center: ViewStyle = {
   justifyContent: "center",
+  alignItems: "center",
+};
+
+const RowCenter: ViewStyle = {
+  justifyContent: "center",
+};
+
+const ColumnCenter: ViewStyle = {
   alignItems: "center",
 };
 
@@ -31,6 +39,14 @@ const Padding6: ViewStyle = {
 };
 const PaddingX = (x: number): ViewStyle => {
   return { padding: x };
+};
+
+const PaddingVerticalX = (x: number): ViewStyle => {
+  return { paddingTop: x, paddingBottom: x };
+};
+
+const PaddingHorizontalX = (x: number): ViewStyle => {
+  return { paddingRight: x, paddingLeft: x };
 };
 
 // margins
@@ -60,12 +76,16 @@ const ShapeNxN = (x: number, y: number): ViewStyle => {
 export {
   Fill,
   Center,
+  RowCenter,
+  ColumnCenter,
   Opacity,
   Opacity0,
   PaddingNone,
   Padding3,
   Padding6,
   PaddingX,
+  PaddingHorizontalX,
+  PaddingVerticalX,
   MarginNone,
   Margin3,
   Margin6,

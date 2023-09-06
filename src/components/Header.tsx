@@ -5,6 +5,8 @@ import Flex from "./Flex";
 import Label from "./Label";
 import Spacer from "./Spacer";
 import { TextStyle, ViewStyle } from "react-native";
+import {  PaddingHorizontalX } from "../styles";
+import defaultValues from "../styles/default-values";
 
 export type LayoutType =
   | "buttons-only"
@@ -74,7 +76,10 @@ const Header = (props: HeaderProps) => {
       <Flex
         fill
         direction={"row"}
-        style={[props.styles?.containerStyle as ViewStyle]}
+        style={[
+          defaultValues.HeaderHorizontalPadding,
+          props.styles?.containerStyle as ViewStyle,
+        ]}
       >
         {renderLeftComponent(hasLeftButton)}
         {middleComponent}
