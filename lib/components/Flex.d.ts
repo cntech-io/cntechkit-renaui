@@ -1,6 +1,6 @@
 import React from "react";
 import { ViewStyle } from "react-native";
-export type FlexProps = {
+export declare type FlexProps = {
     children?: React.ReactNode;
     direction: "row" | "column";
     style?: ViewStyle | ViewStyle[];
