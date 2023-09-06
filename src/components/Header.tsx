@@ -4,6 +4,7 @@ import IconButton from "./IconButton";
 import Flex from "./Flex";
 import Label from "./Label";
 import Spacer from "./Spacer";
+import { TextStyle, ViewStyle } from "react-native";
 
 export type LayoutType =
   | "buttons-only"
@@ -20,6 +21,10 @@ export type HeaderProps = {
   layout: LayoutType;
   onLeftButtonPress?: () => void;
   onRightButtonPress?: () => void;
+  styles?: {
+    containerStyle?: ViewStyle | ViewStyle[];
+    titleStyle?: TextStyle | TextStyle[];
+  };
 };
 
 const Header = (props: HeaderProps) => {
@@ -56,17 +61,23 @@ const Header = (props: HeaderProps) => {
     hasRightButton: boolean,
     hasTitle: boolean
   ) => {
-    const _middleComponent = hasTitle ? (
+    const middleComponent = hasTitle ? (
       <Flex noPadding childrenPosition="MIDDLE" fill direction={"row"}>
-        <Label>{props.title || ""}</Label>
+        <Label bold style={[props.styles?.titleStyle as TextStyle]}>
+          {props.title || ""}
+        </Label>
       </Flex>
     ) : (
       <Spacer />
     );
     return (
-      <Flex fill direction={"row"}>
+      <Flex
+        fill
+        direction={"row"}
+        style={[props.styles?.containerStyle as ViewStyle]}
+      >
         {renderLeftComponent(hasLeftButton)}
-        {_middleComponent}
+        {middleComponent}
         {renderRightComponent(hasRightButton)}
       </Flex>
     );
