@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TextStyle, Text, TextProps } from "react-native";
+import { StyleSheet, TextStyle, Text, TextProps, View } from "react-native";
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -9,12 +9,14 @@ export type LabelProps = {
 
 const Label = (props: LabelProps) => {
   return (
-    <Text
-      style={[styles.root, StyleSheet.flatten(props.style)]}
-      {...props.extraProps}
-    >
-      {props.children}
-    </Text>
+    <View>
+      <Text
+        style={[styles.root, StyleSheet.flatten(props.style)]}
+        {...props.extraProps}
+      >
+        {props.children}
+      </Text>
+    </View>
   );
 };
 
