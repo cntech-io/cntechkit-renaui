@@ -9,7 +9,7 @@ const Icon = (props: IconProps) => {
   const { source, isPlaceholder, ...styleProps } = props;
   const _style = iconStyle(styleProps);
   const _isPlaceholder = props.isPlaceholder ? { opacity: 0 } : {};
-  const _source = source || require("./missing.png");
+  const _source = source || require("../assets/missing.png");
   return (
     <Flex
       paddingSize={defaultTheme.flexPaddingSize}
