@@ -5,6 +5,11 @@ const Fill: ViewStyle = {
 };
 
 // paddings
+
+const PaddingNone: ViewStyle = {
+  padding: 0,
+};
+
 const Padding3: ViewStyle = {
   padding: 3,
 };
@@ -16,6 +21,10 @@ const PaddingX = (x: number): ViewStyle => {
 };
 
 // margins
+const MarginNone: ViewStyle = {
+  margin: 0,
+};
+
 const Margin3: ViewStyle = {
   margin: 3,
 };
@@ -26,4 +35,14 @@ const MarginX = (x: number): ViewStyle => {
   return { margin: x };
 };
 
-export { Fill, Padding3, Padding6, PaddingX, Margin3, Margin6, MarginX };
+export {
+  Fill,
+  PaddingNone,
+  Padding3,
+  Padding6,
+  PaddingX,
+  MarginNone,
+  Margin3,
+  Margin6,
+  MarginX,
+};

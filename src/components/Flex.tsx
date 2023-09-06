@@ -1,12 +1,13 @@
 import React from "react";
 import { StyleSheet, View, ViewStyle } from "react-native";
-import { Fill } from "../styles";
+import { Fill, Padding3, PaddingNone } from "../styles";
 
 export type FlexProps = {
   children?: React.ReactNode;
   direction: "row" | "column";
   style?: ViewStyle | ViewStyle[];
   fill?: boolean;
+  noPadding?: boolean;
 };
 
 const Flex = (props: FlexProps) => {
@@ -17,6 +18,7 @@ const Flex = (props: FlexProps) => {
           styles.rootRow,
           StyleSheet.flatten(props.style),
           props.fill && Fill,
+          props.noPadding && PaddingNone,
         ]}
       >
         {props.children}
@@ -29,6 +31,7 @@ const Flex = (props: FlexProps) => {
         styles.rootColumn,
         StyleSheet.flatten(props.style),
         props.fill && Fill,
+        props.noPadding && PaddingNone,
       ]}
     >
       {props.children}
@@ -39,9 +42,11 @@ const Flex = (props: FlexProps) => {
 const styles = StyleSheet.create({
   rootRow: {
     flexDirection: "row",
+    ...Padding3,
   },
   rootColumn: {
     flexDirection: "column",
+    ...Padding3,
   },
 });
 

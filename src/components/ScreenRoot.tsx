@@ -1,12 +1,13 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, View, ViewStyle } from "react-native";
-import { Fill, Padding3 } from "../styles";
+import { Fill, Padding3, PaddingNone } from "../styles";
 
 export type ScreenRootProps = {
   children?: React.ReactNode;
   style?: ViewStyle | ViewStyle[];
   safeAreaFlag?: boolean;
   header?: React.JSX.Element;
+  noPadding?: boolean;
 };
 
 export type ScreenRootState = {};
@@ -25,7 +26,13 @@ export default class ScreenRoot extends React.Component<
     if (this.props.safeAreaFlag) {
       return (
         <SafeAreaView style={Fill}>
-          <View style={[styles.root, StyleSheet.flatten(this.props.style)]}>
+          <View
+            style={[
+              styles.root,
+              StyleSheet.flatten(this.props.style),
+              this.props.noPadding && PaddingNone,
+            ]}
+          >
             {this.renderHeader()}
             {this.props.children}
           </View>

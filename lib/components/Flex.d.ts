@@ -5,6 +5,7 @@ export declare type FlexProps = {
     direction: "row" | "column";
     style?: ViewStyle | ViewStyle[];
     fill?: boolean;
+    noPadding?: boolean;
 };
 declare const Flex: (props: FlexProps) => React.JSX.Element;
 export default Flex;

@@ -5,6 +5,7 @@ export declare type ScreenRootProps = {
     style?: ViewStyle | ViewStyle[];
     safeAreaFlag?: boolean;
     header?: React.JSX.Element;
+    noPadding?: boolean;
 };
 export declare type ScreenRootState = {};
 export default class ScreenRoot extends React.Component<ScreenRootProps, ScreenRootState> {
