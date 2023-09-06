@@ -1,8 +1,8 @@
 {
   "name": "@cntech-io/cntechkit-renaui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "index.js",
   "repository": "https://github.com/cntech-io/cntechkit-renaui.git",
   "scripts": {
     "build": "tsc",
