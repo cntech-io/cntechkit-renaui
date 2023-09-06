@@ -1,12 +1,11 @@
 {
   "name": "@cntech-io/cntechkit-renaui",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "./lib/index.js",
   "module": "./lib/index.js",
   "files": [
-    "lib",
-    "assets"
+    "lib"
   ],
   "repository": "https://github.com/cntech-io/cntechkit-renaui.git",
   "scripts": {

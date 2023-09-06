@@ -1,8 +1,8 @@
 import React from "react";
 import { Image } from "react-native";
 import Flex from "../flex/Flex";
-import defaultTheme from "../../theme/default";
 import iconStyle from "./icon.style";
+import defaultTheme from "../../theme/default";
 const Icon = (props) => {
     const { source, isPlaceholder, ...styleProps } = props;
     const _style = iconStyle(styleProps);
