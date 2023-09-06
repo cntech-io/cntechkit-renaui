@@ -1,5 +1,5 @@
 import Flex from "./Flex";
 import ScreenRoot from "./ScreenRoot";
-import Text from "./Text";
+import Label from "./Label";
 
-export { ScreenRoot, Flex, Text };
+export { ScreenRoot, Flex, Label };

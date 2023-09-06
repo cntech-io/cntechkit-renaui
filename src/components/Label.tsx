@@ -1,20 +1,20 @@
 import React from "react";
-import RNComponents, { StyleSheet, TextStyle } from "react-native";
+import { StyleSheet, TextStyle, Text, TextProps } from "react-native";
 
-export type TextProps = {
+export type LabelProps = {
   children?: React.ReactNode;
   style?: TextStyle | TextStyle[];
   extraProps?: TextProps;
 };
 
-const Text = (props: TextProps) => {
+const Label = (props: LabelProps) => {
   return (
-    <RNComponents.Text
+    <Text
       style={[styles.root, StyleSheet.flatten(props.style)]}
       {...props.extraProps}
     >
       {props.children}
-    </RNComponents.Text>
+    </Text>
   );
 };
 
@@ -25,4 +25,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Text;
+export default Label;
