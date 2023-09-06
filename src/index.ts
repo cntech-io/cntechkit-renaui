@@ -1,4 +1,4 @@
-import * as Components from "./components";
-import * as Theme from "./theme";
+import * as RenaStyle from "./styles";
+import * as RenaComponents from "./components";
 
-export { Components, Theme };
+export { RenaStyle, RenaComponents };
