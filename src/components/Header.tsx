@@ -5,7 +5,7 @@ import Flex from "./Flex";
 import Label from "./Label";
 import Spacer from "./Spacer";
 import { TextStyle, ViewStyle } from "react-native";
-import {  PaddingHorizontalX } from "../styles";
+import { PaddingHorizontalX, RowCenter } from "../styles";
 import defaultValues from "../styles/default-values";
 
 export type LayoutType =
@@ -77,6 +77,7 @@ const Header = (props: HeaderProps) => {
         fill
         direction={"row"}
         style={[
+          RowCenter,
           defaultValues.HeaderHorizontalPadding,
           props.styles?.containerStyle as ViewStyle,
         ]}

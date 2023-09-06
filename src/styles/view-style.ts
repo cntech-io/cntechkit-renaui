@@ -10,7 +10,7 @@ const Center: ViewStyle = {
 };
 
 const RowCenter: ViewStyle = {
-  justifyContent: "center",
+  alignItems: "center",
 };
 
 const ColumnCenter: ViewStyle = {
