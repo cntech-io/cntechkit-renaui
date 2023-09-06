@@ -1,7 +1,20 @@
-import { ViewStyle } from "react-native";
+import { ImageStyle, ViewStyle } from "react-native";
 
 const Fill: ViewStyle = {
   flex: 1,
+};
+
+const Center: ViewStyle = {
+  justifyContent: "center",
+  alignItems: "center",
+};
+
+const Opacity0: ViewStyle = {
+  opacity: 0,
+};
+
+const Opacity = (number: number): ViewStyle => {
+  return { opacity: number };
 };
 
 // paddings
@@ -35,8 +48,20 @@ const MarginX = (x: number): ViewStyle => {
   return { margin: x };
 };
 
+const Shape30x30: ViewStyle = {
+  width: 30,
+  height: 30,
+};
+
+const ShapeNxN = (x: number, y: number): ViewStyle => {
+  return { width: x, height: y };
+};
+
 export {
   Fill,
+  Center,
+  Opacity,
+  Opacity0,
   PaddingNone,
   Padding3,
   Padding6,
@@ -45,4 +70,6 @@ export {
   Margin3,
   Margin6,
   MarginX,
+  Shape30x30,
+  ShapeNxN,
 };

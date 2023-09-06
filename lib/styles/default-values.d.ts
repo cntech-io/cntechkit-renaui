@@ -7,5 +7,6 @@ declare const _default: {
     TextColor: {
         color: string;
     };
+    IconSize: import("react-native/types").ViewStyle;
 };
 export default _default;

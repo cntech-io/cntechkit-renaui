@@ -1,5 +1,8 @@
 import { ViewStyle } from "react-native";
 declare const Fill: ViewStyle;
+declare const Center: ViewStyle;
+declare const Opacity0: ViewStyle;
+declare const Opacity: (number: number) => ViewStyle;
 declare const PaddingNone: ViewStyle;
 declare const Padding3: ViewStyle;
 declare const Padding6: ViewStyle;
@@ -8,4 +11,6 @@ declare const MarginNone: ViewStyle;
 declare const Margin3: ViewStyle;
 declare const Margin6: ViewStyle;
 declare const MarginX: (x: number) => ViewStyle;
-export { Fill, PaddingNone, Padding3, Padding6, PaddingX, MarginNone, Margin3, Margin6, MarginX, };
+declare const Shape30x30: ViewStyle;
+declare const ShapeNxN: (x: number, y: number) => ViewStyle;
+export { Fill, Center, Opacity, Opacity0, PaddingNone, Padding3, Padding6, PaddingX, MarginNone, Margin3, Margin6, MarginX, Shape30x30, ShapeNxN, };
