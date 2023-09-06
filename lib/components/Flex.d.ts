@@ -6,6 +6,7 @@ export declare type FlexProps = {
     style?: ViewStyle | ViewStyle[];
     fill?: boolean;
     noPadding?: boolean;
+    childrenPosition?: "MIDDLE" | "TOP" | "BOTTOM";
 };
 declare const Flex: (props: FlexProps) => React.JSX.Element;
 export default Flex;

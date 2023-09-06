@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View, ViewStyle } from "react-native";
-import { Fill, PaddingNone } from "../styles";
+import { Center, Fill, PaddingNone } from "../styles";
 import defaultValues from "../styles/default-values";
 
 export type FlexProps = {
@@ -9,6 +9,7 @@ export type FlexProps = {
   style?: ViewStyle | ViewStyle[];
   fill?: boolean;
   noPadding?: boolean;
+  childrenPosition?: "MIDDLE" | "TOP" | "BOTTOM";
 };
 
 const Flex = (props: FlexProps) => {
@@ -20,6 +21,7 @@ const Flex = (props: FlexProps) => {
           StyleSheet.flatten(props.style),
           props.fill && Fill,
           props.noPadding && PaddingNone,
+          props.childrenPosition === "MIDDLE" && Center,
         ]}
       >
         {props.children}
@@ -33,6 +35,7 @@ const Flex = (props: FlexProps) => {
         StyleSheet.flatten(props.style),
         props.fill && Fill,
         props.noPadding && PaddingNone,
+        props.childrenPosition === "MIDDLE" && Center,
       ]}
     >
       {props.children}
