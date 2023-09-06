@@ -1,4 +1,4 @@
-node_modules
+/node_modules
 code.md
 deploy.sh
-src
+/src
