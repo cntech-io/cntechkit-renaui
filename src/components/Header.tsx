@@ -5,7 +5,7 @@ import Flex from "./Flex";
 import Label from "./Label";
 import Spacer from "./Spacer";
 import { TextStyle, ViewStyle } from "react-native";
-import { PaddingHorizontalX, RowCenter } from "../styles";
+import { PaddingHorizontalX, RowCenter, TextSize } from "../styles";
 import defaultValues from "../styles/default-values";
 
 export type LayoutType =
@@ -65,7 +65,10 @@ const Header = (props: HeaderProps) => {
   ) => {
     const middleComponent = hasTitle ? (
       <Flex noPadding childrenPosition="MIDDLE" fill direction={"row"}>
-        <Label bold style={[props.styles?.titleStyle as TextStyle]}>
+        <Label
+          bold
+          style={[TextSize(24), props.styles?.titleStyle as TextStyle]}
+        >
           {props.title || ""}
         </Label>
       </Flex>
