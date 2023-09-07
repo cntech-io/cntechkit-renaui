@@ -1,13 +1,14 @@
 import React from "react";
 import { StyleSheet, TextStyle, Text, TextProps, View } from "react-native";
 import defaultValues from "../styles/default-values";
-import { TextBold } from "../styles";
+import { TextBold, TextColor } from "../styles";
 
 export type LabelProps = {
   children?: React.ReactNode;
   style?: TextStyle | TextStyle[];
   extraProps?: TextProps;
   bold?: boolean;
+  color?: string;
 };
 
 const Label = (props: LabelProps) => {
@@ -18,6 +19,7 @@ const Label = (props: LabelProps) => {
           styles.root,
           StyleSheet.flatten(props.style),
           props.bold && TextBold,
+          props.color !== undefined && TextColor(props.color),
         ]}
         {...props.extraProps}
       >
