@@ -1,5 +1,9 @@
+import { ViewStyle } from "react-native";
 import { TextColor, TextSize } from "./font";
 import {
+  BgColor,
+  BorderRadius,
+  Height,
   Margin3,
   Padding3,
   PaddingHorizontalX,
@@ -13,4 +17,7 @@ export default {
   TextColor: TextColor("black"),
   IconSize: Shape30x30,
   HeaderHorizontalPadding: PaddingHorizontalX(6),
+  ButtonHeight: Height(40),
+  BorderRadius: BorderRadius(8),
+  BackgroundColor: BgColor("black"),
 };

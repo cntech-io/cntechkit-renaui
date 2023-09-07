@@ -1,13 +1,17 @@
+import { ViewStyle } from "react-native";
 declare const _default: {
-    Padding: import("react-native/types").ViewStyle;
-    Margin: import("react-native/types").ViewStyle;
+    Padding: ViewStyle;
+    Margin: ViewStyle;
     TextSize: {
         fontSize: number;
     };
     TextColor: {
         color: string;
     };
-    IconSize: import("react-native/types").ViewStyle;
-    HeaderHorizontalPadding: import("react-native/types").ViewStyle;
+    IconSize: ViewStyle;
+    HeaderHorizontalPadding: ViewStyle;
+    ButtonHeight: ViewStyle;
+    BorderRadius: ViewStyle;
+    BackgroundColor: ViewStyle;
 };
 export default _default;

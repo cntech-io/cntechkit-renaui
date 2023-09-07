@@ -19,7 +19,10 @@ const Icon = (props: IconProps) => {
       style={[styles.root, props.isPlaceholder ? Opacity0 : {}]}
     >
       <Image
-        style={[styles.image as ImageStyle, props.styles?.imageStyle]}
+        style={[
+          styles.image as ImageStyle,
+          StyleSheet.flatten(props.styles?.imageStyle),
+        ]}
         source={props.source}
       />
     </Flex>

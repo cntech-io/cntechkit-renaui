@@ -4,8 +4,8 @@ import IconButton from "./IconButton";
 import Flex from "./Flex";
 import Label from "./Label";
 import Spacer from "./Spacer";
-import { TextStyle, ViewStyle } from "react-native";
-import { PaddingHorizontalX, RowCenter, TextSize } from "../styles";
+import { StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { RowCenter, TextSize } from "../styles";
 import defaultValues from "../styles/default-values";
 
 export type LayoutType =
@@ -67,7 +67,7 @@ const Header = (props: HeaderProps) => {
       <Flex noPadding childrenPosition="MIDDLE" fill direction={"row"}>
         <Label
           bold
-          style={[TextSize(24), props.styles?.titleStyle as TextStyle]}
+          style={[TextSize(24), StyleSheet.flatten(props.styles?.titleStyle)]}
         >
           {props.title || ""}
         </Label>
@@ -82,7 +82,7 @@ const Header = (props: HeaderProps) => {
         style={[
           RowCenter,
           defaultValues.HeaderHorizontalPadding,
-          props.styles?.containerStyle as ViewStyle,
+          StyleSheet.flatten(props.styles?.containerStyle),
         ]}
       >
         {renderLeftComponent(hasLeftButton)}

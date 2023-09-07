@@ -25,6 +25,18 @@ const Opacity = (number: number): ViewStyle => {
   return { opacity: number };
 };
 
+const Height = (x: number): ViewStyle => {
+  return { height: x };
+};
+
+const Width = (x: number): ViewStyle => {
+  return { width: x };
+};
+
+const BgColor = (x: string): ViewStyle => {
+  return { backgroundColor: x };
+};
+
 // paddings
 
 const PaddingNone: ViewStyle = {
@@ -73,13 +85,20 @@ const ShapeNxN = (x: number, y: number): ViewStyle => {
   return { width: x, height: y };
 };
 
+const BorderRadius = (x: number): ViewStyle => {
+  return { borderRadius: x };
+};
+
 export {
   Fill,
   Center,
   RowCenter,
   ColumnCenter,
   Opacity,
+  Height,
+  Width,
   Opacity0,
+  BgColor,
   PaddingNone,
   Padding3,
   Padding6,
@@ -92,4 +111,5 @@ export {
   MarginX,
   Shape30x30,
   ShapeNxN,
+  BorderRadius,
 };
