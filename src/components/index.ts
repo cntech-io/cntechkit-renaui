@@ -6,8 +6,19 @@ import Spacer from "./Spacer";
 import Icon, { IconProps } from "./Icon";
 import IconButton, { IconButtonProps } from "./IconButton";
 import Button, { ButtonProps } from "./Button";
+import LinkLabel, { LinkLabelProps } from "./LabelButton";
 
-export { ScreenRoot, Flex, Label, Header, Spacer, Icon, IconButton, Button };
+export {
+  ScreenRoot,
+  Flex,
+  Label,
+  Header,
+  Spacer,
+  Icon,
+  IconButton,
+  Button,
+  LinkLabel,
+};
 
 export type {
   FlexProps,
@@ -17,4 +28,5 @@ export type {
   IconProps,
   IconButtonProps,
   ButtonProps,
+  LinkLabelProps,
 };

@@ -8,7 +8,7 @@ import {
 import Flex from "./Flex";
 import Label from "./Label";
 import defaultValues from "../styles/default-values";
-import { Center, Fill } from "../styles";
+import { Center, Fill, Margin3, PaddingHorizontalX } from "../styles";
 
 export type ButtonProps = {
   onPress: () => void;
@@ -36,6 +36,8 @@ const Button = (props: ButtonProps): React.JSX.Element => {
           defaultValues.BorderRadius,
           Fill,
           Center,
+          PaddingHorizontalX(8),
+          Margin3,
           StyleSheet.flatten(props.styles?.containerStyle),
         ]}
       >
