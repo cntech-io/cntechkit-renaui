@@ -5,6 +5,8 @@ export declare type LabelProps = {
     style?: TextStyle | TextStyle[];
     extraProps?: TextProps;
     bold?: boolean;
+    color?: string;
+    noMargin?: boolean;
 };
 declare const Label: (props: LabelProps) => React.JSX.Element;
 export default Label;

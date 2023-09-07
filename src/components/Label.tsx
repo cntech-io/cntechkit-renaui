@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, TextStyle, Text, TextProps, View } from "react-native";
 import defaultValues from "../styles/default-values";
-import { TextBold, TextColor } from "../styles";
+import { MarginNone, TextBold, TextColor } from "../styles";
 
 export type LabelProps = {
   children?: React.ReactNode;
@@ -9,6 +9,7 @@ export type LabelProps = {
   extraProps?: TextProps;
   bold?: boolean;
   color?: string;
+  noMargin?: boolean;
 };
 
 const Label = (props: LabelProps) => {
@@ -20,6 +21,7 @@ const Label = (props: LabelProps) => {
           StyleSheet.flatten(props.style),
           props.bold && TextBold,
           props.color !== undefined && TextColor(props.color),
+          props.noMargin && MarginNone,
         ]}
         {...props.extraProps}
       >
@@ -33,6 +35,7 @@ const styles = StyleSheet.create({
   root: {
     ...defaultValues.TextSize,
     ...defaultValues.TextColor,
+    ...defaultValues.Margin,
   },
 });
 
