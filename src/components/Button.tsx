@@ -29,17 +29,16 @@ const Button = (props: ButtonProps): React.JSX.Element => {
         defaultValues.ButtonHeight,
         defaultValues.BorderRadius,
         defaultValues.BackgroundColor,
+        StyleSheet.flatten(props.styles?.containerStyle),
       ]}
     >
       <Flex
         direction="row"
         style={[
-          defaultValues.BorderRadius,
           Fill,
           Center,
           PaddingHorizontalX(8),
           Margin3,
-          StyleSheet.flatten(props.styles?.containerStyle),
         ]}
       >
         {props.leftIcon}
