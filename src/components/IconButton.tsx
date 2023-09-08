@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
-import { Shape30x30 } from "../styles";
+import { StyleSheet, TouchableOpacity, ViewStyle } from "react-native";
+import { Shape30x30, ShapeNxN } from "../styles";
 import Icon, { IconProps } from "./Icon";
 
 export type IconButtonProps = {
@@ -12,7 +12,7 @@ export type IconButtonProps = {
 const IconButton = (props: IconButtonProps) => {
   return (
     <TouchableOpacity
-      style={[styles.root]}
+      style={[props.iconProps.small ? ShapeNxN(20, 20) : Shape30x30]}
       onPress={props.onPress}
       onLongPress={props.onLongPress}
     >
@@ -20,11 +20,5 @@ const IconButton = (props: IconButtonProps) => {
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  root: {
-    ...Shape30x30,
-  },
-});
 
 export default IconButton;

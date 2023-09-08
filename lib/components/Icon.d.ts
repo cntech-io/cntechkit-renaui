@@ -3,6 +3,7 @@ import { ImageStyle, ViewStyle } from "react-native";
 export declare type IconProps = {
     source?: any;
     isPlaceholder?: boolean;
+    small?: boolean;
     styles?: {
         containerStyle?: ViewStyle | ViewStyle[];
         imageStyle?: ImageStyle | ImageStyle[];
