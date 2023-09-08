@@ -32,7 +32,6 @@ const Button = (props: ButtonProps): React.JSX.Element => {
         StyleSheet.flatten(props.styles?.containerStyle),
       ]}
     >
-      {props.leftIcon}
       <Flex
         direction="row"
         style={[
@@ -44,6 +43,7 @@ const Button = (props: ButtonProps): React.JSX.Element => {
           StyleSheet.flatten(props.styles?.containerStyle),
         ]}
       >
+        {props.leftIcon}
         <Label
           style={StyleSheet.flatten(props.styles?.labelStyle)}
           color="white"
