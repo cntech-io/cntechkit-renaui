@@ -29,18 +29,11 @@ const Button = (props: ButtonProps): React.JSX.Element => {
         defaultValues.ButtonHeight,
         defaultValues.BorderRadius,
         defaultValues.BackgroundColor,
+        defaultValues.Margin,
         StyleSheet.flatten(props.styles?.containerStyle),
       ]}
     >
-      <Flex
-        direction="row"
-        style={[
-          Fill,
-          Center,
-          PaddingHorizontalX(8),
-          Margin3,
-        ]}
-      >
+      <Flex direction="row" style={[Fill, Center, PaddingHorizontalX(8)]}>
         {props.leftIcon}
         <Label
           style={StyleSheet.flatten(props.styles?.labelStyle)}
