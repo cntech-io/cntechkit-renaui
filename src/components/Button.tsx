@@ -29,7 +29,6 @@ const Button = (props: ButtonProps): React.JSX.Element => {
         defaultValues.ButtonHeight,
         defaultValues.BorderRadius,
         defaultValues.BackgroundColor,
-        StyleSheet.flatten(props.styles?.containerStyle),
       ]}
     >
       <Flex
